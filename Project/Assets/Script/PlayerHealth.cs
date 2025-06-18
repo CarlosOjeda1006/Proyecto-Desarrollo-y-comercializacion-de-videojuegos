@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player died!");
         gameObject.SetActive(false);
+        Time.timeScale = 0f;
     }
 }
 

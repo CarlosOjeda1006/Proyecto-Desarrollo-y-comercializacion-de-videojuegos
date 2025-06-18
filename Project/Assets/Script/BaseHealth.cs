@@ -29,6 +29,7 @@ public class BaseHealth : MonoBehaviour
         Debug.Log("¡Base destruida! GAME OVER.");
         gameObject.SetActive(false);
 
+        Time.timeScale = 0f;
     }
 }
 
