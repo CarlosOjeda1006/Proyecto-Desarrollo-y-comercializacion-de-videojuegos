@@ -5,6 +5,9 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 5;
     private int currentHealth;
 
+    public int MaxHealth => maxHealth;
+    public int CurrentHealth => currentHealth;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -27,4 +30,5 @@ public class PlayerHealth : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
+
 
