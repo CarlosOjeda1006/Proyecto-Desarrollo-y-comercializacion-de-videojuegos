@@ -2,34 +2,15 @@ using UnityEngine;
 
 public class BaseHealth : MonoBehaviour
 {
-    public int maxHealth = 10;
-    private int currentHealth;
-
-    public int MaxHealth => maxHealth;
-    public int CurrentHealth => currentHealth;
-
-    void Start()
-    {
-        currentHealth = maxHealth;
-    }
+    public float damageToProgress = 2f;
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        ProgressManager.Instance.ReduceProgress(damage * 2);
+        float totalDamage = damage * damageToProgress;
+        ProgressManager.Instance.ReduceProgress(totalDamage);
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Debug.Log("¡Base destruida! GAME OVER.");
-        gameObject.SetActive(false);
-
-        Time.timeScale = 0f;
+        Debug.Log("La base fue golpeada. Progreso reducido en: " + totalDamage);
     }
 }
+
 
