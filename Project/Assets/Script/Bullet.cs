@@ -13,25 +13,28 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.position += (Vector3)(direction * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
-            EnemyAI enemy = other.GetComponent<EnemyAI>();
-            if (enemy != null)
+            ShooterEnemy shooter = other.GetComponent<ShooterEnemy>();
+            if (shooter != null)
             {
-                enemy.TakeDamage(damage);
-                Destroy(gameObject);
+                shooter.TakeDamage(damage);
             }
+
+            EnemyAI melee = other.GetComponent<EnemyAI>();
+            if (melee != null)
+            {
+                melee.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
         }
     }
-
-    void Start()
-    {
-        Destroy(gameObject, 3f);
-    }
 }
+
 
