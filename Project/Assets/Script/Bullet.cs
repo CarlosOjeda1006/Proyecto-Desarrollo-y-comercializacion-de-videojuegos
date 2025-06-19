@@ -6,6 +6,11 @@ public class Bullet : MonoBehaviour
     public int damage = 1;
     private Vector2 direction;
 
+    void Start()
+    {
+        Destroy(gameObject, 5f);
+    }
+
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
@@ -21,20 +26,19 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             ShooterEnemy shooter = other.GetComponent<ShooterEnemy>();
-            if (shooter != null)
-            {
-                shooter.TakeDamage(damage);
-            }
+            if (shooter != null) shooter.TakeDamage(damage);
 
             EnemyAI melee = other.GetComponent<EnemyAI>();
-            if (melee != null)
-            {
-                melee.TakeDamage(damage);
-            }
+            if (melee != null) melee.TakeDamage(damage);
+
+            Espora espora = other.GetComponent<Espora>();
+            if (espora != null) espora.TakeDamage(damage);
 
             Destroy(gameObject);
         }
     }
 }
+
+
 
 

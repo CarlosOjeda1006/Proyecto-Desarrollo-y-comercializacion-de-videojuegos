@@ -7,10 +7,15 @@ public class Projectile : MonoBehaviour
     private string targetTag;
     private int damage;
 
-    public void Initialize(Vector2 direction, string targetTag, int dmg)
+    void Start()
+    {
+        Destroy(gameObject, 5f);
+    }
+
+    public void Initialize(Vector2 direction, string tag, int dmg)
     {
         moveDirection = direction.normalized;
-        this.targetTag = targetTag;
+        targetTag = tag;
         damage = dmg;
     }
 
@@ -38,5 +43,6 @@ public class Projectile : MonoBehaviour
         }
     }
 }
+
 
 
