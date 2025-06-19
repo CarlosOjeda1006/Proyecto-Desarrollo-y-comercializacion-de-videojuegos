@@ -29,8 +29,9 @@ public class ProgressManager : MonoBehaviour
         if (progress >= maxProgress)
         {
             Debug.Log("¡Has ganado!");
-            Time.timeScale = 0f;
+            Object.FindFirstObjectByType<EndGameUI>().ShowVictory();
         }
+
     }
 
     public void ReduceProgress(float amount)
