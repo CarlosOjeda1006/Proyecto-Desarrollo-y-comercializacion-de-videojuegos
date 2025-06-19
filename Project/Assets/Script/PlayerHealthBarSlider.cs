@@ -9,7 +9,7 @@ public class PlayerHealthBarSlider : MonoBehaviour
 
     void Start()
     {
-        if (playerHealth != null)
+        if (playerHealth != null && slider != null)
         {
             slider.maxValue = playerHealth.MaxHealth;
             slider.value = playerHealth.CurrentHealth;
@@ -18,17 +18,28 @@ public class PlayerHealthBarSlider : MonoBehaviour
 
     void Update()
     {
-        if (playerHealth == null || slider == null || fillImage == null) return;
+        if (playerHealth == null || slider == null || fillImage == null)
+            return;
 
-        float health = playerHealth.CurrentHealth;
-        float max = playerHealth.MaxHealth;
-        float percent = health / max;
+        int current = playerHealth.CurrentHealth;
+        int max = playerHealth.MaxHealth;
 
-        slider.value = health;
+        slider.maxValue = max;
+        slider.value = current;
 
-        fillImage.color = Color.Lerp(Color.red, Color.green, percent);
+        float percent = (float)current / max;
+
+        if (percent > 0.5f)
+        {
+            fillImage.color = Color.Lerp(Color.yellow, Color.green, (percent - 0.5f) * 2);
+        }
+        else
+        {
+            fillImage.color = Color.Lerp(Color.red, Color.yellow, percent * 2);
+        }
 
         transform.rotation = Quaternion.identity;
     }
 }
+
 
