@@ -70,8 +70,23 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
-        if (currentHealth <= 0) Destroy(gameObject);
+        if (currentHealth <= 0)
+        {
+            TryDropCoin(0.75f);
+            Destroy(gameObject);
+        }
     }
+
+    public void TryDropCoin(float dropChance)
+    {
+        float roll = Random.Range(0f, 1f);
+        if (roll <= dropChance)
+        {
+            GameObject coin = Instantiate(Resources.Load<GameObject>("Coin"), transform.position, Quaternion.identity);
+        }
+    }
+
+
 }
 
 

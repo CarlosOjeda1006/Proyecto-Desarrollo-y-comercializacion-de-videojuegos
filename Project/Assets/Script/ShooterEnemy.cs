@@ -84,13 +84,20 @@ public class ShooterEnemy : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            Die();
+            float chance = maxHealth > 5 ? 0.5f : 0.25f;
+            TryDropCoin(chance);
+            Destroy(gameObject);
         }
     }
 
-    void Die()
+    public void TryDropCoin(float dropChance)
     {
-        Destroy(gameObject);
+        float roll = Random.Range(0f, 1f);
+        if (roll <= dropChance)
+        {
+            GameObject coin = Instantiate(Resources.Load<GameObject>("Coin"), transform.position, Quaternion.identity);
+        }
     }
+
 }
 

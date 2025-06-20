@@ -77,12 +77,21 @@ public class RatonCapitan : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
-        if (currentHealth <= 0) Die();
+        if (currentHealth <= 0)
+        {
+            TryDropCoin(1f);
+            Destroy(gameObject);
+        }
     }
 
-    void Die()
+    public void TryDropCoin(float dropChance)
     {
-        Destroy(gameObject);
+        float roll = Random.Range(0f, 1f);
+        if (roll <= dropChance)
+        {
+            GameObject coin = Instantiate(Resources.Load<GameObject>("Coin"), transform.position, Quaternion.identity);
+        }
     }
+
 }
 

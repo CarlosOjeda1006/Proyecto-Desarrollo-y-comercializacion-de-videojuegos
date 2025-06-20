@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Base
   - Resource
+  - Coin
   layers:
   - Default
   - TransparentFX
