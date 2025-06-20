@@ -21,6 +21,12 @@ public class ShooterEnemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+
+        if (player == null)
+            player = GameObject.FindWithTag("Player")?.transform;
+
+        if (baseTarget == null)
+            baseTarget = GameObject.FindWithTag("Base")?.transform;
     }
 
     void Update()

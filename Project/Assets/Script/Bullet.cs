@@ -34,6 +34,9 @@ public class Bullet : MonoBehaviour
             Espora espora = other.GetComponent<Espora>();
             if (espora != null) espora.TakeDamage(damage);
 
+            RatonCapitan boss = other.GetComponent<RatonCapitan>();
+            if (boss != null) boss.TakeDamage(damage);
+
             Destroy(gameObject);
         }
     }
