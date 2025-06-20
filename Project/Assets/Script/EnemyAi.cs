@@ -1,140 +1,79 @@
 using UnityEngine;
-using System.Collections;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class EnemyAI : MonoBehaviour
 {
-    public Transform baseTransform;
     public float speed = 2f;
-    public float detectionRange = 10f;
-    public int maxHealth = 3;
+    public int maxHealth = 5;
+    public int damage = 1;
+    public float attackCooldown = 1f;
 
-    private int currentHealth;
-    private Rigidbody2D rb;
-    private Transform playerTransform;
-    private bool isTouchingTarget = false;
-    private Coroutine damageCoroutine;
+    public Transform player;
+    public Transform baseTarget;
+
+    private float currentHealth;
+    private float attackTimer;
 
     void Start()
     {
         currentHealth = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
 
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            playerTransform = playerObj.transform;
-        }
+        if (player == null)
+            player = GameObject.FindWithTag("Player")?.transform;
+
+        if (baseTarget == null)
+            baseTarget = GameObject.FindWithTag("Base")?.transform;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (isTouchingTarget)
-        {
-            rb.linearVelocity = Vector2.zero;
-            return;
-        }
-
         Transform target = GetClosestTarget();
-        if (target != null)
+        if (target == null) return;
+
+        float distance = Vector2.Distance(transform.position, target.position);
+
+        if (distance > 0.5f)
         {
-            float distance = Vector2.Distance(transform.position, target.position);
-            if (distance <= detectionRange)
+            Vector2 direction = (target.position - transform.position).normalized;
+            transform.position += (Vector3)(direction * speed * Time.deltaTime);
+        }
+        else
+        {
+            attackTimer -= Time.deltaTime;
+            if (attackTimer <= 0f)
             {
-                Vector2 direction = (target.position - transform.position).normalized;
-                rb.linearVelocity = direction * speed;
-            }
-            else
-            {
-                rb.linearVelocity = Vector2.zero;
+                if (target.CompareTag("Player"))
+                {
+                    PlayerHealth ph = target.GetComponent<PlayerHealth>();
+                    if (ph != null) ph.TakeDamage(damage);
+                }
+                else if (target.CompareTag("Base"))
+                {
+                    BaseHealth bh = target.GetComponent<BaseHealth>();
+                    if (bh != null) bh.TakeDamage(damage);
+                }
+
+                attackTimer = attackCooldown;
             }
         }
     }
 
     Transform GetClosestTarget()
     {
-        if (playerTransform == null || baseTransform == null)
-            return null;
+        if (player == null || baseTarget == null) return null;
 
-        float distToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-        float distToBase = Vector2.Distance(transform.position, baseTransform.position);
+        float playerDist = Vector2.Distance(transform.position, player.position);
+        float baseDist = Vector2.Distance(transform.position, baseTarget.position);
 
-        return (distToPlayer <= distToBase) ? playerTransform : baseTransform;
+        return playerDist <= baseDist ? player : baseTarget;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(int amount)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Base"))
-        {
-            isTouchingTarget = true;
-
-            if (damageCoroutine == null)
-            {
-                damageCoroutine = StartCoroutine(DealDamageOverTime(collision.gameObject));
-            }
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Base"))
-        {
-            isTouchingTarget = false;
-
-            if (damageCoroutine != null)
-            {
-                StopCoroutine(damageCoroutine);
-                damageCoroutine = null;
-            }
-        }
-    }
-
-    IEnumerator DealDamageOverTime(GameObject target)
-    {
-        while (true)
-        {
-            if (target == null)
-            {
-                damageCoroutine = null;
-                yield break;
-            }
-
-            if (target.CompareTag("Player"))
-            {
-                PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(1);
-                }
-            }
-            else if (target.CompareTag("Base"))
-            {
-                BaseHealth baseHealth = target.GetComponent<BaseHealth>();
-                if (baseHealth != null)
-                {
-                    baseHealth.TakeDamage(1);
-                }
-            }
-
-            yield return new WaitForSeconds(1f);
-        }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
+        currentHealth -= amount;
+        if (currentHealth <= 0) Destroy(gameObject);
     }
 }
+
 
 
 

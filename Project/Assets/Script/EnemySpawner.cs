@@ -1,39 +1,39 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    public Transform baseTransform;
+    public List<GameObject> enemyPrefabs;
     public float spawnInterval = 5f;
-    public Vector2 spawnAreaMin = new Vector2(-5, 8);
-    public Vector2 spawnAreaMax = new Vector2(5, 12);
+    public Vector2 spawnAreaMin = new Vector2(-3, -3);
+    public Vector2 spawnAreaMax = new Vector2(3, 6);
 
-    void Start()
+    private float timer;
+
+    void Update()
     {
-        if (enemyPrefab == null)
+        timer -= Time.deltaTime;
+        if (timer <= 0f)
         {
-            Debug.LogError("EnemySpawner: No se asignó un prefab de enemigo.");
-            enabled = false;
-            return;
+            SpawnRandomEnemy();
+            timer = spawnInterval;
         }
-
-        InvokeRepeating(nameof(SpawnEnemy), 2f, spawnInterval);
     }
 
-    void SpawnEnemy()
+    void SpawnRandomEnemy()
     {
+        if (enemyPrefabs.Count == 0) return;
+
+        int index = Random.Range(0, enemyPrefabs.Count);
+        GameObject enemyToSpawn = enemyPrefabs[index];
+
         Vector2 spawnPos = new Vector2(
             Random.Range(spawnAreaMin.x, spawnAreaMax.x),
             Random.Range(spawnAreaMin.y, spawnAreaMax.y)
         );
 
-        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-
-        EnemyAI ai = enemy.GetComponent<EnemyAI>();
-        if (ai != null && baseTransform != null)
-        {
-            ai.baseTransform = baseTransform;
-        }
+        Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
     }
 }
+
 
