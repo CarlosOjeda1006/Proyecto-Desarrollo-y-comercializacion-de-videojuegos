@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8857301914563882452}
   - component: {fileID: 2231778533164587716}
   - component: {fileID: 9222648571341632805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RatonCapitan
   m_TagString: Enemy
   m_Icon: {fileID: 0}

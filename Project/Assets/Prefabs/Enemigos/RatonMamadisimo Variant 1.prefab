@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6511717605075427962}
   - component: {fileID: 323937475717030025}
   - component: {fileID: 1015881409055598941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RatonMamadisimo Variant 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}

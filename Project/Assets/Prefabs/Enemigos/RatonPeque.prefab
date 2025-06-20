@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8323125708475133803}
   - component: {fileID: 6174477316957628044}
   - component: {fileID: 1224409136576308060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RatonPeque
   m_TagString: Enemy
   m_Icon: {fileID: 0}

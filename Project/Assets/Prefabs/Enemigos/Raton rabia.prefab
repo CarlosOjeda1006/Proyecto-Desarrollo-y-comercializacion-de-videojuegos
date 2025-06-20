@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5894595624245161551}
   - component: {fileID: 3628054517234975097}
   - component: {fileID: 5369239162662918043}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Raton rabia
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -175,7 +175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1dc9d37d836c5b4886dcda7e98e7d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseTransform: {fileID: 0}
   speed: 3
-  detectionRange: 10
   maxHealth: 3
+  damage: 1
+  attackCooldown: 1
+  player: {fileID: 0}
+  baseTarget: {fileID: 0}

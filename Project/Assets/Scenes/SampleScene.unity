@@ -2817,6 +2817,10 @@ PrefabInstance:
       value: RatonMamadisimo Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 4608417178812532939, guid: 5f017ecbb3466f94c828d1ea0a65a710, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608417178812532939, guid: 5f017ecbb3466f94c828d1ea0a65a710, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2826,7 +2830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7567390364677459401, guid: 5f017ecbb3466f94c828d1ea0a65a710, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.59
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 7567390364677459401, guid: 5f017ecbb3466f94c828d1ea0a65a710, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2876,6 +2880,10 @@ PrefabInstance:
     - target: {fileID: 1792313234891502496, guid: bbdfdff36a19d1140ad3875e37418fe9, type: 3}
       propertyPath: m_Name
       value: Raton rabia
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792313234891502496, guid: bbdfdff36a19d1140ad3875e37418fe9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1792313234891502496, guid: bbdfdff36a19d1140ad3875e37418fe9, type: 3}
       propertyPath: m_IsActive
@@ -3008,7 +3016,7 @@ MonoBehaviour:
   resourcePrefab: {fileID: 9117394652446098457, guid: 2172ad15b590a6b4e97779886b777e91, type: 3}
   spawnInterval: 3
   spawnAreaMin: {x: -3.5, y: -3.5}
-  spawnAreaMax: {x: 3.5, y: 7}
+  spawnAreaMax: {x: 3.5, y: 6.5}
   maxResources: 3
 --- !u!4 &1352534005
 Transform:
@@ -3088,6 +3096,10 @@ PrefabInstance:
     - target: {fileID: 4204675621744980529, guid: bf18d8e536569ed4ba61c63590869363, type: 3}
       propertyPath: m_Name
       value: RatonCapitan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204675621744980529, guid: bf18d8e536569ed4ba61c63590869363, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4204675621744980529, guid: bf18d8e536569ed4ba61c63590869363, type: 3}
       propertyPath: m_IsActive
@@ -4195,6 +4207,10 @@ PrefabInstance:
       value: RatonPeque
       objectReference: {fileID: 0}
     - target: {fileID: 2306083536113344670, guid: 2778fa4ecd4e94c40810eac788153e3e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306083536113344670, guid: 2778fa4ecd4e94c40810eac788153e3e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4858,7 +4874,7 @@ GameObject:
   - component: {fileID: 2104261955}
   - component: {fileID: 2104261956}
   - component: {fileID: 2104261957}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5149,6 +5165,10 @@ PrefabInstance:
     - target: {fileID: 4288086271989969613, guid: 648fa1896459096418e23e4fabd8f6d2, type: 3}
       propertyPath: m_Name
       value: HongoGigante
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288086271989969613, guid: 648fa1896459096418e23e4fabd8f6d2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4288086271989969613, guid: 648fa1896459096418e23e4fabd8f6d2, type: 3}
       propertyPath: m_IsActive
