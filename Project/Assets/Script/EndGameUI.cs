@@ -19,8 +19,10 @@ public class EndGameUI : MonoBehaviour
 
     public Button defeatRestartButton;
     public Button defeatQuitButton;
+    public Button defeatMenuButton;
 
     public Text coinText;
+    public Text finalCoinText;
 
     void Start()
     {
@@ -39,14 +41,12 @@ public class EndGameUI : MonoBehaviour
 
         defeatRestartButton.onClick.AddListener(RestartLevel);
         defeatQuitButton.onClick.AddListener(QuitGame);
+        defeatMenuButton.onClick.AddListener(BackToMainMenu);
     }
 
     public void ShowVictory()
     {
         Time.timeScale = 0f;
-
-        if (coinText != null)
-            coinText.text = "Monedas obtenidas: " + CoinManager.Instance.totalCoins;
 
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         int totalScenes = SceneManager.sceneCountInBuildSettings;
@@ -55,10 +55,16 @@ public class EndGameUI : MonoBehaviour
 
         if (isLastLevel)
         {
+            if (finalCoinText != null)
+                finalCoinText.text = "Monedas obtenidas: " + CoinManager.Instance.totalCoins;
+
             finalVictoryPanel.SetActive(true);
         }
         else
         {
+            if (coinText != null)
+                coinText.text = "Monedas obtenidas: " + CoinManager.Instance.totalCoins;
+
             victoryPanel.SetActive(true);
         }
     }
@@ -94,5 +100,7 @@ public class EndGameUI : MonoBehaviour
         Application.Quit();
     }
 }
+
+
 
 
