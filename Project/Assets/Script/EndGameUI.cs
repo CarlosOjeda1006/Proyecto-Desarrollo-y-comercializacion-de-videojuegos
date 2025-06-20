@@ -46,6 +46,7 @@ public class EndGameUI : MonoBehaviour
 
     public void ShowVictory()
     {
+        CoinManager.Instance.SaveCoins();
         Time.timeScale = 0f;
 
         int currentIndex = SceneManager.GetActiveScene().buildIndex;

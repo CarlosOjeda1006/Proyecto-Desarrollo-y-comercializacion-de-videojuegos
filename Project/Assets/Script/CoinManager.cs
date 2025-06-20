@@ -1,34 +1,64 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CoinManager : MonoBehaviour
 {
     public static CoinManager Instance;
 
-    public int totalCoins = 0;
-    public Text coinText;
+    public int totalCoins;
+    private int sessionCoins;
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            LoadCoins();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void Start()
+    public void AddCoin(int amount)
     {
-        UpdateUI();
+        sessionCoins += amount;
     }
 
-    public void AddCoins(int amount)
+    public void SaveCoins()
     {
-        totalCoins += amount;
-        UpdateUI();
+        totalCoins += sessionCoins;
+        PlayerPrefs.SetInt("TotalCoins", totalCoins);
+        PlayerPrefs.Save();
     }
 
-    void UpdateUI()
+    public void LoadCoins()
     {
-        if (coinText != null)
-            coinText.text = "Monedas: " + totalCoins.ToString();
+        totalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+        sessionCoins = 0;
     }
+
+    public int GetSessionCoins()
+    {
+        return sessionCoins;
+    }
+
+    public void ResetSession()
+    {
+        sessionCoins = 0;
+    }
+
+#if UNITY_EDITOR
+    public void ResetTotalCoins()
+    {
+        totalCoins = 0;
+        PlayerPrefs.SetInt("TotalCoins", totalCoins);
+        PlayerPrefs.Save();
+        Debug.Log("Monedas totales reiniciadas manualmente.");
+    }
+#endif
+
 }
+
 

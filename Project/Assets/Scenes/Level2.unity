@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343cc8225f4cda840bd0cc5b7c0a6fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 635612875}
 --- !u!1 &374247291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1523,51 @@ RectTransform:
   m_AnchoredPosition: {x: -0.88127, y: -171}
   m_SizeDelta: {x: 385.99, y: 72.3734}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &407048127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407048129}
+  - component: {fileID: 407048128}
+  m_Layer: 0
+  m_Name: CoinContador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &407048128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407048127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6281532e432a2e44ea27695010cdbb9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 1629290228}
+--- !u!4 &407048129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407048127}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 918.0234, y: 1311.7838, z: -16.272665}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &407119522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4707,7 +4752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoins: 0
-  coinText: {fileID: 1629290228}
 --- !u!4 &1325091250
 Transform:
   m_ObjectHideFlags: 0
@@ -7010,3 +7054,4 @@ SceneRoots:
   - {fileID: 1813737501}
   - {fileID: 8022285768268832858}
   - {fileID: 900203969}
+  - {fileID: 407048129}

@@ -16,6 +16,7 @@ public class ProgressManager : MonoBehaviour
 
     void Start()
     {
+        CoinManager.Instance.ResetSession();
         progressBar.maxValue = maxProgress;
         progressBar.value = progress;
     }
