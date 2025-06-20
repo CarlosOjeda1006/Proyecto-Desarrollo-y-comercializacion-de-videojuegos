@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 4f);
     }
 
     public void SetDirection(Vector2 dir)
@@ -37,10 +37,14 @@ public class Bullet : MonoBehaviour
             RatonCapitan boss = other.GetComponent<RatonCapitan>();
             if (boss != null) boss.TakeDamage(damage);
 
+            HongoGigante hongo = other.GetComponent<HongoGigante>();
+            if (hongo != null) hongo.TakeDamage(damage);
+
             Destroy(gameObject);
         }
     }
 }
+
 
 
 
