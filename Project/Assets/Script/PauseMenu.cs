@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public Button resumeButton;
     public Button resetButton;
     public Button quitButton;
+    public Button menuButton;
 
     private bool isPaused = false;
 
@@ -18,6 +19,7 @@ public class PauseMenu : MonoBehaviour
         resumeButton.onClick.AddListener(Resume);
         resetButton.onClick.AddListener(ResetLevel);
         quitButton.onClick.AddListener(QuitGame);
+        menuButton.onClick.AddListener(BackToMainMenu);
     }
 
     void Update()
@@ -56,5 +58,12 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Saliendo del juego...");
         Application.Quit();
     }
+
+    public void BackToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
+
 

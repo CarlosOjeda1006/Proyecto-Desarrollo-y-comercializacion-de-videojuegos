@@ -9,9 +9,23 @@ public class EnemySpawner : MonoBehaviour
     public Vector2 spawnAreaMax = new Vector2(3, 6);
 
     private float timer;
+    private bool started = false;
+
+    void Start()
+    {
+        Invoke(nameof(StartSpawning), 1f);
+    }
+
+    void StartSpawning()
+    {
+        started = true;
+        timer = spawnInterval;
+    }
 
     void Update()
     {
+        if (!started) return;
+
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
@@ -35,5 +49,6 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
     }
 }
+
 
 
