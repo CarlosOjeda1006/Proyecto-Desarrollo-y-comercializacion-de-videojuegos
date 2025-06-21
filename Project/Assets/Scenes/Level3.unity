@@ -5451,7 +5451,7 @@ MonoBehaviour:
   - {fileID: 4608417178812532939, guid: 5f017ecbb3466f94c828d1ea0a65a710, type: 3}
   - {fileID: 1792313234891502496, guid: bbdfdff36a19d1140ad3875e37418fe9, type: 3}
   - {fileID: 1838822261440448175, guid: ccc0aaed9375b614ca20bc1f2be622a4, type: 3}
-  spawnInterval: 1.2
+  spawnInterval: 1
   spawnAreaMin: {x: -3.5, y: -3.5}
   spawnAreaMax: {x: 3.5, y: 6.5}
 --- !u!4 &1667481309
@@ -7001,7 +7001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288086271989969613, guid: 648fa1896459096418e23e4fabd8f6d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288086271989969613, guid: 648fa1896459096418e23e4fabd8f6d2, type: 3}
       propertyPath: m_TagString
