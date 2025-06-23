@@ -6,6 +6,13 @@ public class PlayerShooter : MonoBehaviour
     public GameObject bulletPrefab;
     public float fireRate = 1f;
     private float fireTimer;
+    private float baseFireRate;
+
+    void Start()
+    {
+        baseFireRate = fireRate;
+        fireRate = baseFireRate + PlayerUpgrades.Instance.dañoExtra;
+    }
 
     void Update()
     {

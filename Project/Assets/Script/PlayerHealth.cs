@@ -10,7 +10,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = maxHealth + PlayerUpgrades.Instance.vidaExtra;
+        maxHealth = currentHealth;
     }
     public void TakeDamage(int damage)
     {

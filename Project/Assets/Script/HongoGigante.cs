@@ -41,8 +41,10 @@ public class HongoGigante : MonoBehaviour
         if (currentHealth <= 0)
         {
             TryDropCoin(1f);
+            ProgressManager.Instance.JefeDerrotado();
             Destroy(gameObject);
         }
+
     }
 
     public void TryDropCoin(float dropChance)
