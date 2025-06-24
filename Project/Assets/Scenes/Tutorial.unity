@@ -2949,7 +2949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &932221286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,11 +5582,75 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9009917161339343395, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      propertyPath: m_Size.x
+      value: 8.341065
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009917161339343395, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      propertyPath: m_Size.y
+      value: 7.778145
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009917161339343395, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009917161339343395, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.15543032
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009917161339343395, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.886374
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3506798073589659033, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1879536395}
   m_SourcePrefab: {fileID: 100100000, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+--- !u!1 &1879536394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3506798073589659033, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+  m_PrefabInstance: {fileID: 1879536393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1879536395
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879536394}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.08369177, y: 0.39104712}
+  m_Radius: 4.159011
 --- !u!1 &1893018659
 GameObject:
   m_ObjectHideFlags: 0
@@ -5922,6 +5986,22 @@ PrefabInstance:
     - target: {fileID: 2229131242343183834, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Size.x
+      value: 15.476404
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Size.y
+      value: 23.530542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Offset.x
+      value: -1.3024817
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 8322714206308368697, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6270,7 +6350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 2306083536113344670, guid: 2778fa4ecd4e94c40810eac788153e3e, type: 3}
+  - {fileID: 823155259106303127, guid: 48374240407ccc047bdac7d60f2a23df, type: 3}
   spawnInterval: 1.5
   spawnAreaMin: {x: -3.5, y: -3.5}
   spawnAreaMax: {x: 3.5, y: 6.5}

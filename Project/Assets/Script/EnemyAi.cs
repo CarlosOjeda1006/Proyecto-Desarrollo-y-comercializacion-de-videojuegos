@@ -82,7 +82,7 @@ public class EnemyAI : MonoBehaviour
         float roll = Random.Range(0f, 1f);
         if (roll <= dropChance)
         {
-            GameObject coin = Instantiate(Resources.Load<GameObject>("Coin"), transform.position, Quaternion.identity);
+            GameObject coin = Instantiate(Resources.Load<GameObject>("Coin (1)"), transform.position, Quaternion.identity);
         }
     }
 

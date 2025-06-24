@@ -2638,7 +2638,7 @@ MonoBehaviour:
   progress: 0
   maxProgress: 100
   jefeRatonPrefab: {fileID: 0}
-  jefeHongoPrefab: {fileID: 4288086271989969613, guid: 648fa1896459096418e23e4fabd8f6d2, type: 3}
+  jefeHongoPrefab: {fileID: 5723742566140086705, guid: 96f88c5bd18db5640b68a216e7b5b99e, type: 3}
   puntoAparicion: {fileID: 1667481309}
 --- !u!1 &1005026069
 GameObject:
@@ -5004,10 +5004,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 2306083536113344670, guid: 2778fa4ecd4e94c40810eac788153e3e, type: 3}
-  - {fileID: 4608417178812532939, guid: 5f017ecbb3466f94c828d1ea0a65a710, type: 3}
-  - {fileID: 1792313234891502496, guid: bbdfdff36a19d1140ad3875e37418fe9, type: 3}
-  - {fileID: 1838822261440448175, guid: ccc0aaed9375b614ca20bc1f2be622a4, type: 3}
+  - {fileID: 823155259106303127, guid: 48374240407ccc047bdac7d60f2a23df, type: 3}
+  - {fileID: 1085506049765811485, guid: e8f6718d3624ab043b89a29d8f8264a3, type: 3}
+  - {fileID: 7511667931549186478, guid: fc24f1c9f1953f948a9e36d239b0a142, type: 3}
+  - {fileID: 8001536679271242035, guid: 161c67fb718feab4f849698ced7cdf9d, type: 3}
   spawnInterval: 1
   spawnAreaMin: {x: -3.5, y: -3.5}
   spawnAreaMax: {x: 3.5, y: 6.5}
@@ -6180,11 +6180,59 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9009917161339343395, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3506798073589659033, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3011931614108425571}
   m_SourcePrefab: {fileID: 100100000, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+--- !u!1 &3011931614108425570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3506798073589659033, guid: 4e038dc0485f151409c70a599d553a1a, type: 3}
+  m_PrefabInstance: {fileID: 3011931614108425569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &3011931614108425571
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011931614108425570}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.06684073, y: 0.5829692}
+  m_Radius: 4.196732
 --- !u!1001 &3714051269747106177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6293,6 +6341,22 @@ PrefabInstance:
     - target: {fileID: 2229131242343183834, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Size.x
+      value: 15.931078
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Size.y
+      value: 23.567135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Offset.x
+      value: -2.0152333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431131628888175756, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.22452927
       objectReference: {fileID: 0}
     - target: {fileID: 8322714206308368697, guid: 4c4a62e0f3bdc324e813daa11239c1a8, type: 3}
       propertyPath: m_AnchorMax.x
