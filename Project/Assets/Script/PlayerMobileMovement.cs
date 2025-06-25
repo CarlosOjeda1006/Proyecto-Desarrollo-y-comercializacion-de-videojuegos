@@ -14,7 +14,7 @@ public class PlayerMobileMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 input = joystick.InputDirection;
-        rb.velocity = input * moveSpeed;
+        rb.linearVelocity = input * moveSpeed;
     }
 }
 
