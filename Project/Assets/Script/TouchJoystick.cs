@@ -1,46 +1,114 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class TouchJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+
+public class TouchJoystick : MonoBehaviour
 {
-    public Image joystickBackground;
-    public Image joystickHandle;
+    public GameObject joystickUI;
+    public RectTransform joystickBackground;
+    public RectTransform joystickHandle;
 
     private Vector2 inputDirection = Vector2.zero;
     public Vector2 InputDirection => inputDirection;
 
-    public void OnPointerDown(PointerEventData eventData)
+    private Canvas canvas;
+
+    void Start()
     {
-        OnDrag(eventData);
+        canvas = GetComponentInParent<Canvas>();
+        joystickUI.SetActive(false);
     }
 
-    public void OnDrag(PointerEventData eventData)
+    void Update()
     {
-        Vector2 pos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            joystickBackground.rectTransform,
-            eventData.position,
-            eventData.pressEventCamera,
-            out pos);
-
-        pos.x /= joystickBackground.rectTransform.sizeDelta.x;
-        pos.y /= joystickBackground.rectTransform.sizeDelta.y;
-
-        inputDirection = new Vector2(pos.x * 2, pos.y * 2);
-        inputDirection = (inputDirection.magnitude > 1) ? inputDirection.normalized : inputDirection;
-
-        joystickHandle.rectTransform.anchoredPosition = new Vector2(
-            inputDirection.x * (joystickBackground.rectTransform.sizeDelta.x / 2),
-            inputDirection.y * (joystickBackground.rectTransform.sizeDelta.y / 2));
+#if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!EventSystem.current.IsPointerOverGameObject())
+                ShowJoystick(Input.mousePosition);
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            UpdateJoystick(Input.mousePosition);
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            HideJoystick();
+        }
+#else
+    if (Input.touchCount > 0)
+    {
+        Touch touch = Input.GetTouch(0);
+        if (touch.phase == TouchPhase.Began)
+        {
+            if (!EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                ShowJoystick(touch.position);
+        }
+        else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+        {
+            UpdateJoystick(touch.position);
+        }
+        else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+        {
+            HideJoystick();
+        }
+    }
+#endif
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+
+    void ShowJoystick(Vector2 screenPosition)
     {
         inputDirection = Vector2.zero;
-        joystickHandle.rectTransform.anchoredPosition = Vector2.zero;
+        joystickHandle.anchoredPosition = Vector2.zero;
+
+        joystickUI.SetActive(true);
+
+        Vector2 anchoredPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvas.transform as RectTransform,
+            screenPosition,
+            canvas.worldCamera,
+            out anchoredPos
+        );
+
+        joystickBackground.anchoredPosition = anchoredPos;
+    }
+
+    void UpdateJoystick(Vector2 screenPosition)
+    {
+        Vector2 localPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            joystickBackground,
+            screenPosition,
+            canvas.worldCamera,
+            out localPos
+        );
+
+        localPos.x /= joystickBackground.sizeDelta.x;
+        localPos.y /= joystickBackground.sizeDelta.y;
+
+        inputDirection = new Vector2(localPos.x * 2, localPos.y * 2);
+        inputDirection = inputDirection.magnitude > 1 ? inputDirection.normalized : inputDirection;
+
+        joystickHandle.anchoredPosition = new Vector2(
+            inputDirection.x * (joystickBackground.sizeDelta.x / 2),
+            inputDirection.y * (joystickBackground.sizeDelta.y / 2));
+    }
+
+    void HideJoystick()
+    {
+        joystickUI.SetActive(false);
+        inputDirection = Vector2.zero;
+        joystickHandle.anchoredPosition = Vector2.zero;
     }
 }
+
+
+
+
 
 
 
