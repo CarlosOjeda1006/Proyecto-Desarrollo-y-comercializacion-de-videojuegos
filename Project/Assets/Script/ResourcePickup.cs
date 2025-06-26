@@ -10,6 +10,8 @@ public class ResourcePickup : MonoBehaviour
         {
             ProgressManager.Instance.AddProgress(progressValue);
             Destroy(gameObject);
+
+
         }
     }
 }

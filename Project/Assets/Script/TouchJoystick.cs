@@ -61,6 +61,13 @@ public class TouchJoystick : MonoBehaviour
 
     void ShowJoystick(Vector2 screenPosition)
     {
+        // Evita que aparezca en la parte superior de la pantalla (por ejemplo, el 25% superior)
+        float screenHeight = Screen.height;
+        float screenTopLimit = screenHeight * 0.75f; // 75% de altura joystick solo en parte inferior
+
+        if (screenPosition.y > screenTopLimit)
+            return; // No mostrar joystick si se toca en la zona restringida
+
         inputDirection = Vector2.zero;
         joystickHandle.anchoredPosition = Vector2.zero;
 
@@ -76,6 +83,7 @@ public class TouchJoystick : MonoBehaviour
 
         joystickBackground.anchoredPosition = anchoredPos;
     }
+
 
     void UpdateJoystick(Vector2 screenPosition)
     {

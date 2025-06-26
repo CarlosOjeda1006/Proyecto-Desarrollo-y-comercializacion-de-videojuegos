@@ -8,9 +8,9 @@ public class ShopUpgradeUI : MonoBehaviour
     public Button dañoButton;
     public Text feedbackText;
 
-    public int costoVida = 1;
-    public int costoVelocidad = 1;
-    public int costoDaño = 1;
+    public int costoVida = 10;
+    public int costoVelocidad = 10;
+    public int costoDaño = 10;
 
     void Start()
     {
