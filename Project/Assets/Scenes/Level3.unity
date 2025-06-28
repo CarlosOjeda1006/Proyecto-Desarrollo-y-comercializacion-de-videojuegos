@@ -2046,8 +2046,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4316737578474021272, guid: 508d4aeb378661744b94efa975a79ec7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2081,8 +2081,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6837158, y: 25.410034}
-  m_SizeDelta: {x: 546.69, y: 94.3721}
+  m_AnchoredPosition: {x: -9.751, y: 30}
+  m_SizeDelta: {x: 527.42, y: 171.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &774895391
 GameObject:
@@ -2311,9 +2311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quit
-
-'
+  m_Text: 
 --- !u!222 &832237156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3074,8 +3072,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6834717, y: 343.51758}
-  m_SizeDelta: {x: 546.69, y: 88.9648}
+  m_AnchoredPosition: {x: -1.71, y: 295}
+  m_SizeDelta: {x: 515.52, y: 183.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070643510
 MonoBehaviour:
@@ -3097,8 +3095,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1055401912455593709, guid: 6c6af05c3d2a3674599699153dc2c088, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3294,7 +3292,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: 
 --- !u!222 &1162481323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4812,8 +4810,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6837158, y: -244}
-  m_SizeDelta: {x: 546.69, y: 94.3721}
+  m_AnchoredPosition: {x: -5.951, y: -271}
+  m_SizeDelta: {x: 535.02, y: 193.062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1507800707
 MonoBehaviour:
@@ -4835,8 +4833,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 3927807601397267823, guid: 6976d861d00b55444bd96b997d9c3272, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4947,7 +4945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4967,7 +4965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Loser
+  m_Text: 'You Lose '
 --- !u!222 &1507828044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6245,9 +6243,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Menu principal
-
-'
+  m_Text: 
 --- !u!222 &2039807952
 CanvasRenderer:
   m_ObjectHideFlags: 0
