@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5431131628888175756}
   - component: {fileID: 7853396698116171547}
   - component: {fileID: 2780181415461654734}
+  - component: {fileID: -4503110901756135872}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -206,6 +207,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7308796874532041738, guid: bce8640bb39eadf41a4431331ebd56c0, type: 3}
   fireRate: 5
+--- !u!95 &-4503110901756135872
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416132727806140302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e762737647682c43913e92722c6c9cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5097466896391142819
 GameObject:
   m_ObjectHideFlags: 0
