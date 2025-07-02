@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 250550701179978452}
   - component: {fileID: 2088696299746274979}
   - component: {fileID: 878397099179825841}
+  - component: {fileID: -4484892390072075450}
   m_Layer: 0
   m_Name: Espora (1)
   m_TagString: Enemy
@@ -151,3 +152,25 @@ MonoBehaviour:
   fireRate: 1.5
   maxHealth: 2
   damagePerShot: 1
+--- !u!95 &-4484892390072075450
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001536679271242035}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 940dfa42a13e2ed45a730d96f9c19d6c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

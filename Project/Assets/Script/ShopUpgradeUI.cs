@@ -19,7 +19,7 @@ public class ShopUpgradeUI : MonoBehaviour
         dañoButton.onClick.AddListener(ComprarDaño);
     }
 
-    // 👇 Estas funciones ahora son públicas
+   
     public void ComprarVida()
     {
         if (CoinManager.Instance.totalCoins >= costoVida)
@@ -44,7 +44,7 @@ public class ShopUpgradeUI : MonoBehaviour
             PlayerUpgrades.Instance.velocidadExtra += 0.5f;
             PlayerUpgrades.Instance.GuardarMejoras();
             PlayerPrefs.SetInt("TotalCoins", CoinManager.Instance.totalCoins);
-            feedbackText.text = "💨 Velocidad aumentada!";
+            feedbackText.text = "Velocidad aumentada!";
         }
         else
         {
@@ -60,7 +60,7 @@ public class ShopUpgradeUI : MonoBehaviour
             PlayerUpgrades.Instance.dañoExtra += 0.5f;
             PlayerUpgrades.Instance.GuardarMejoras();
             PlayerPrefs.SetInt("TotalCoins", CoinManager.Instance.totalCoins);
-            feedbackText.text = "🔫 Disparo mejorado!";
+            feedbackText.text = "Disparo mejorado!";
         }
         else
         {
