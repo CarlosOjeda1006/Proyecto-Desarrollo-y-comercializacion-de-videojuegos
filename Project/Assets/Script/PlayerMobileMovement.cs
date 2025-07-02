@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class PlayerMobileMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float baseMoveSpeed = 5f;
     public TouchJoystick joystick;
     private Rigidbody2D rb;
+    private float moveSpeed;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        moveSpeed = baseMoveSpeed + PlayerUpgrades.Instance.velocidadExtra;
     }
 
     void FixedUpdate()
@@ -17,6 +19,7 @@ public class PlayerMobileMovement : MonoBehaviour
         rb.linearVelocity = input * moveSpeed;
     }
 }
+
 
 
 
