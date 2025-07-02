@@ -1417,6 +1417,55 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -10}
   minY: -2
   maxY: 2
+--- !u!1 &569738475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569738477}
+  - component: {fileID: 569738476}
+  m_Layer: 0
+  m_Name: HealthSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569738476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569738475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6c9731e1738e84289ea296f2a14591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcePrefab: {fileID: 9117394652446098457, guid: 4c1db4e0c496c2c43980f62a27e7c31f, type: 3}
+  spawnInterval: 10
+  spawnAreaMin: {x: -2.5, y: -3.5}
+  spawnAreaMax: {x: 2.5, y: 5.5}
+  maxResources: 3
+--- !u!4 &569738477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569738475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -7563,6 +7612,7 @@ SceneRoots:
   - {fileID: 1521182462}
   - {fileID: 1004070006}
   - {fileID: 1352534005}
+  - {fileID: 569738477}
   - {fileID: 2117888779}
   - {fileID: 346127294}
   - {fileID: 894035505}
