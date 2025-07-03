@@ -5581,7 +5581,7 @@ MonoBehaviour:
   - {fileID: 1085506049765811485, guid: e8f6718d3624ab043b89a29d8f8264a3, type: 3}
   - {fileID: 7511667931549186478, guid: fc24f1c9f1953f948a9e36d239b0a142, type: 3}
   - {fileID: 8001536679271242035, guid: 161c67fb718feab4f849698ced7cdf9d, type: 3}
-  spawnInterval: 6.5
+  spawnInterval: 5.5
   spawnAreaMin: {x: -2.5, y: -5}
   spawnAreaMax: {x: -2, y: -5.5}
 --- !u!4 &1731142170
@@ -6048,10 +6048,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcePrefab: {fileID: 9117394652446098457, guid: 4c1db4e0c496c2c43980f62a27e7c31f, type: 3}
-  spawnInterval: 10
+  spawnInterval: 15
   spawnAreaMin: {x: -2.5, y: -3.5}
   spawnAreaMax: {x: 2.5, y: 5.5}
-  maxResources: 3
+  maxResources: 1
 --- !u!4 &1836879511
 Transform:
   m_ObjectHideFlags: 0

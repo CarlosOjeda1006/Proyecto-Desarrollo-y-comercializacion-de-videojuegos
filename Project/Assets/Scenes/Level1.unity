@@ -1447,10 +1447,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcePrefab: {fileID: 9117394652446098457, guid: 4c1db4e0c496c2c43980f62a27e7c31f, type: 3}
-  spawnInterval: 10
+  spawnInterval: 15
   spawnAreaMin: {x: -2.5, y: -3.5}
   spawnAreaMax: {x: 2.5, y: 5.5}
-  maxResources: 3
+  maxResources: 1
 --- !u!4 &569738477
 Transform:
   m_ObjectHideFlags: 0
@@ -1872,7 +1872,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 823155259106303127, guid: 48374240407ccc047bdac7d60f2a23df, type: 3}
   - {fileID: 1085506049765811485, guid: e8f6718d3624ab043b89a29d8f8264a3, type: 3}
-  spawnInterval: 5
+  spawnInterval: 4
   spawnAreaMin: {x: -2.5, y: 3}
   spawnAreaMax: {x: 2.5, y: 5.5}
 --- !u!4 &894035505
@@ -3842,7 +3842,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 823155259106303127, guid: 48374240407ccc047bdac7d60f2a23df, type: 3}
   - {fileID: 1085506049765811485, guid: e8f6718d3624ab043b89a29d8f8264a3, type: 3}
-  spawnInterval: 7
+  spawnInterval: 6
   spawnAreaMin: {x: -2.5, y: -5}
   spawnAreaMax: {x: -2, y: -5.5}
 --- !u!4 &1353778715
@@ -5818,7 +5818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a49bc90af957f4eb12420dd927dc4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  baseMoveSpeed: 5
   joystick: {fileID: 1860269499}
 --- !u!95 &1889845241
 Animator:
@@ -6875,7 +6875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a49bc90af957f4eb12420dd927dc4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  baseMoveSpeed: 5
   joystick: {fileID: 0}
 --- !u!114 &2071771609
 MonoBehaviour:
