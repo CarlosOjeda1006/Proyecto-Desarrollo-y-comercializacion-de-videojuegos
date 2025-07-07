@@ -3824,10 +3824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 2306083536113344670, guid: 2778fa4ecd4e94c40810eac788153e3e, type: 3}
-  - {fileID: 4608417178812532939, guid: 5f017ecbb3466f94c828d1ea0a65a710, type: 3}
-  - {fileID: 1792313234891502496, guid: bbdfdff36a19d1140ad3875e37418fe9, type: 3}
-  - {fileID: 1838822261440448175, guid: ccc0aaed9375b614ca20bc1f2be622a4, type: 3}
+  - {fileID: 823155259106303127, guid: 48374240407ccc047bdac7d60f2a23df, type: 3}
+  - {fileID: 1085506049765811485, guid: e8f6718d3624ab043b89a29d8f8264a3, type: 3}
+  - {fileID: 7511667931549186478, guid: fc24f1c9f1953f948a9e36d239b0a142, type: 3}
+  - {fileID: 8001536679271242035, guid: 161c67fb718feab4f849698ced7cdf9d, type: 3}
   spawnInterval: 1.5
   spawnAreaMin: {x: -2.5, y: 0}
   spawnAreaMax: {x: 2.5, y: 5.5}
