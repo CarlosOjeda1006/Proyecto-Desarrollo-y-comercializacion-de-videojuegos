@@ -8,6 +8,10 @@ public class PlayerUpgrades : MonoBehaviour
     public float velocidadExtra = 0f;
     public float dañoExtra = 0f;
 
+    public int maxVidaExtra = 40;
+    public float maxVelocidadExtra = 40f;
+    public float maxDañoExtra = 40f;
+
     void Awake()
     {
         if (Instance == null)
@@ -36,5 +40,10 @@ public class PlayerUpgrades : MonoBehaviour
         PlayerPrefs.SetFloat("DañoExtra", dañoExtra);
         PlayerPrefs.Save();
     }
+
+    public bool PuedeMejorarVida() => vidaExtra < maxVidaExtra;
+    public bool PuedeMejorarVelocidad() => velocidadExtra < maxVelocidadExtra;
+    public bool PuedeMejorarDaño() => dañoExtra < maxDañoExtra;
 }
+
 

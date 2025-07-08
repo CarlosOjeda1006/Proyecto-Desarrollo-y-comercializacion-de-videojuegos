@@ -13,7 +13,7 @@ public class CoinManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadCoins();
+            LoadCoins();  // Cargar monedas al inicio
         }
         else
         {
@@ -58,7 +58,7 @@ public class CoinManager : MonoBehaviour
         Debug.Log("Monedas totales reiniciadas manualmente.");
     }
 #endif
-
 }
+
 
 

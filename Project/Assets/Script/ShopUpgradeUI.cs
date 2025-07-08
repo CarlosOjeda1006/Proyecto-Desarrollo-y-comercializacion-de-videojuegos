@@ -19,9 +19,16 @@ public class ShopUpgradeUI : MonoBehaviour
         dañoButton.onClick.AddListener(ComprarDaño);
     }
 
-   
     public void ComprarVida()
     {
+        Debug.Log("Monedas actuales: " + CoinManager.Instance.totalCoins);
+
+        if (!PlayerUpgrades.Instance.PuedeMejorarVida())
+        {
+            feedbackText.text = "🛑 Vida al máximo.";
+            return;
+        }
+
         if (CoinManager.Instance.totalCoins >= costoVida)
         {
             CoinManager.Instance.totalCoins -= costoVida;
@@ -38,13 +45,19 @@ public class ShopUpgradeUI : MonoBehaviour
 
     public void ComprarVelocidad()
     {
+        if (!PlayerUpgrades.Instance.PuedeMejorarVelocidad())
+        {
+            feedbackText.text = "🛑 Velocidad al máximo.";
+            return;
+        }
+
         if (CoinManager.Instance.totalCoins >= costoVelocidad)
         {
             CoinManager.Instance.totalCoins -= costoVelocidad;
             PlayerUpgrades.Instance.velocidadExtra += 0.5f;
             PlayerUpgrades.Instance.GuardarMejoras();
             PlayerPrefs.SetInt("TotalCoins", CoinManager.Instance.totalCoins);
-            feedbackText.text = "Velocidad aumentada!";
+            feedbackText.text = "💨 Velocidad aumentada!";
         }
         else
         {
@@ -54,13 +67,19 @@ public class ShopUpgradeUI : MonoBehaviour
 
     public void ComprarDaño()
     {
+        if (!PlayerUpgrades.Instance.PuedeMejorarDaño())
+        {
+            feedbackText.text = "🛑 Daño al máximo.";
+            return;
+        }
+
         if (CoinManager.Instance.totalCoins >= costoDaño)
         {
             CoinManager.Instance.totalCoins -= costoDaño;
             PlayerUpgrades.Instance.dañoExtra += 0.5f;
             PlayerUpgrades.Instance.GuardarMejoras();
             PlayerPrefs.SetInt("TotalCoins", CoinManager.Instance.totalCoins);
-            feedbackText.text = "Disparo mejorado!";
+            feedbackText.text = "🔫 Disparo mejorado!";
         }
         else
         {
@@ -68,4 +87,6 @@ public class ShopUpgradeUI : MonoBehaviour
         }
     }
 }
+
+
 
