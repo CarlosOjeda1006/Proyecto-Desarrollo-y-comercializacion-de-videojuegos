@@ -35,7 +35,7 @@ public class ShopUpgradeUI : MonoBehaviour
             PlayerUpgrades.Instance.vidaExtra += 1;
             PlayerUpgrades.Instance.GuardarMejoras();
             PlayerPrefs.SetInt("TotalCoins", CoinManager.Instance.totalCoins);
-            feedbackText.text = "🩸 +1 Vida Extra Comprada!";
+            feedbackText.text = "Vida Aumentada";
         }
         else
         {
