@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public Button quitButton;
     public Button menuButton;
 
+    public GameObject settingsPanel;
+
     private bool isPaused = false;
 
     void Start()
@@ -64,6 +66,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+    public void GoToSettings()
+    {
+        menuUI.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
 }
 
 
