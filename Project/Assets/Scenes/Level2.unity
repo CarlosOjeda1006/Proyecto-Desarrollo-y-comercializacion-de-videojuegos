@@ -3434,9 +3434,9 @@ MonoBehaviour:
   vidaExtra: 0
   velocidadExtra: 0
   "da\xF1oExtra": 0
-  maxVidaExtra: 40
-  maxVelocidadExtra: 40
-  "maxDa\xF1oExtra": 40
+  maxVidaExtra: 30
+  maxVelocidadExtra: 15
+  "maxDa\xF1oExtra": 30
 --- !u!4 &805473899
 Transform:
   m_ObjectHideFlags: 0
