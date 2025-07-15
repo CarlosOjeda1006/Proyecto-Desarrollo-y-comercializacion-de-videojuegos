@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: 1987a835df5698a4791f0898059b9e70
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 630000270858664944
+    second: "Rato\u0301n1_Run-2_0"
+  - first:
+      213: -5174003646494815373
+    second: "Rato\u0301n1_Run-2_1"
+  - first:
+      213: 310505173594343240
+    second: "Rato\u0301n1_Run-2_2"
+  - first:
+      213: 8356823351311534763
+    second: "Rato\u0301n1_Run-2_3"
+  - first:
+      213: 211381485741204312
+    second: "Rato\u0301n1_Run-2_4"
+  - first:
+      213: -1991864172415970402
+    second: "Rato\u0301n1_Run-2_5"
+  - first:
+      213: -6545354435169349014
+    second: "Rato\u0301n1_Run-2_6"
+  - first:
+      213: 2696631667445481009
+    second: "Rato\u0301n1_Run-2_7"
+  - first:
+      213: -5002685096254719172
+    second: "Rato\u0301n1_Run-2_8"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_0"
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2775
+        width: 66
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb3ee098e53eb800800000000000000
+      internalID: 630000270858664944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_1"
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 2660
+        width: 226
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bc918b81f3238b0800000000000000
+      internalID: -5174003646494815373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_2"
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 2575
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847030d6fc22f4400800000000000000
+      internalID: 310505173594343240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_3"
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 2531
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa0d99cf8669f370800000000000000
+      internalID: 8356823351311534763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_4"
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 2537
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853e2b1675afee200800000000000000
+      internalID: 211381485741204312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_5"
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 2522
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93915aa61a7b54e0800000000000000
+      internalID: -1991864172415970402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_6"
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 2442
+        width: 244
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6214bae1da3a25a0800000000000000
+      internalID: -6545354435169349014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_7"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 142
+        width: 1894
+        height: 2279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e3824d63c5c6520800000000000000
+      internalID: 2696631667445481009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rato\u0301n1_Run-2_8"
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 854
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3bb89a0964e29ab0800000000000000
+      internalID: -5002685096254719172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Rato\u0301n1_Run-2_0": 630000270858664944
+      "Rato\u0301n1_Run-2_1": -5174003646494815373
+      "Rato\u0301n1_Run-2_2": 310505173594343240
+      "Rato\u0301n1_Run-2_3": 8356823351311534763
+      "Rato\u0301n1_Run-2_4": 211381485741204312
+      "Rato\u0301n1_Run-2_5": -1991864172415970402
+      "Rato\u0301n1_Run-2_6": -6545354435169349014
+      "Rato\u0301n1_Run-2_7": 2696631667445481009
+      "Rato\u0301n1_Run-2_8": -5002685096254719172
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

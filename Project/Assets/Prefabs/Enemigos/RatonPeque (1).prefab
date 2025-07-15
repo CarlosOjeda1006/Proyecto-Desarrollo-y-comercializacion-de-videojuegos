@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8895894778604636260}
   - component: {fileID: 7398693552688456835}
   - component: {fileID: 5644649016548002713}
+  - component: {fileID: 8195982611719387437}
   m_Layer: 7
   m_Name: RatonPeque (1)
   m_TagString: Enemy
@@ -185,6 +186,28 @@ MonoBehaviour:
   baseTarget: {fileID: 0}
   projectilePrefab: {fileID: 8736899805806188045, guid: c180e0a71decf8c42879ff377f3e3138, type: 3}
   firePoint: {fileID: 8855240327138355247}
+--- !u!95 &8195982611719387437
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823155259106303127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33083df668ed0bc4bbcc8fa3de4bcb1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3800745532104891396
 GameObject:
   m_ObjectHideFlags: 0
